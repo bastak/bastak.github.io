@@ -1,1 +1,6 @@
-This if me. I am hui
+layout: page
+title: About hui
+permalink: /about/
+
+
+This is me. I am hui
