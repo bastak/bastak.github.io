@@ -8,6 +8,10 @@
   {% endfor %}
 </ul>
 
+
+Another link:
+{% post_url 2020-08-07-birth %}
+
 You can use the [editor on GitHub](https://github.com/bastak/bastak.github.io/edit/master/docs/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
