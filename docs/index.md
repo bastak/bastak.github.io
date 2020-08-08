@@ -10,7 +10,7 @@
 
 
 Another link:
-{% post_url 2020-08-07-birth %}
+{% link _posts/2020-08-07-birth.md %}
 
 You can use the [editor on GitHub](https://github.com/bastak/bastak.github.io/edit/master/docs/index.md) to maintain and preview the content for your website in Markdown files.
 
