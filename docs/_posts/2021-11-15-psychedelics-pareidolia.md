@@ -2,6 +2,9 @@
 layout: post
 title:  "What do psychedelics do on the algorithmic level? The case of pareidolia"
 ---
+
+{% include math.html %}
+
 Psychedelics change perception strongly and in the structured way. We also know which receptors they affect (and some of them, like LSD are quite specific - the seem to affect only one receptor - 5-HT2A).
 
 If only one receptor can change the perception and actions so much, looking at psychedelics can be a good approach to understand how the brain works.
