@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title:  "Three types of comparators for action selection"
 ---
 
