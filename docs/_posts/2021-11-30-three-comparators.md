@@ -3,7 +3,7 @@ layout: post
 title:  "Three types of comparators for action selection"
 ---
 
-
+{% include math.html %}
 
 $V$
 $$W$$
