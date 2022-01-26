@@ -8,4 +8,4 @@
   {% endfor %}
 </ul>
 
-Wake up samurai. We have the eschaton to immanentize.
+

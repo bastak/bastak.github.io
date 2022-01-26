@@ -5,20 +5,6 @@ title:  "Three types of comparators for action selection"
 
 {% include math.html %}
 
-$V$
-$$W$$
-\\(Z\\)
-\(D\)
-hui
- {% raw %}
-  $$a^2 + b^2 = c^2$$ --> note that all equations between these tags will not need escaping! 
- {% endraw %}
-
-{::nomarkdown}  
-\begin{equation}
-(A)'_{i,j} = A_{j,i}
-\end{equation}
-{:/}  
 _It is not useful to know what will happen. What is useful is to know what might happen, depending on what you do. If there is nothing you can do about the future, what is the functional use of predicting it? So what is useful is to predict the future conditionally to a different set of potential actions. This is about manipulating models of the world, not representing the present._
 <p style="text-align: right;" markdown="1">[Romain Brette](http://romainbrette.fr/a-brief-critique-of-predictive-coding/)</p>
 
