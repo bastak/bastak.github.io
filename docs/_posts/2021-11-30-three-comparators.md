@@ -41,11 +41,12 @@ In his paper, Cisek proposes to consider any organism as a set of negative feedb
 ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fspindle%2FpyaFc_GhqT.png?alt=media&token=bbf4b4a3-caf6-469b-9c4b-d31381e0ffd7)
  <p style="text-align: center;" markdown="1">Figure from [Cisek paper](https://link.springer.com/content/pdf/10.3758/s13414-019-01760-1.pdf) illustrating the idea of negative feedback controllers.</p>
  
-The main idea is that the organism wants to maximize its survival chances. (if we ignore for now the cases where reaching the goal of reproductive success clashes with the survival goal). However the chances of survival is an intractable entity: the organism cannot directly compute which states have high survival chances and which - low. Instead, the organism tries to keep the set of certain (more computable!) variables at their optimal values (setpoints) because keeping these variables at their setpoints correlates really well with survival. For example, keeping the concentration of ions in the body at a certain level, not having a face of a lion in your visual field, etc.   
+The main idea is that the organism wants to maximize its survival chances. (if we ignore for now the cases where reaching the goal of reproductive success clashes with the survival goal). However the chances of survival is an intractable entity: the organism cannot directly compute which states have high survival chances and which - low. Instead, the organism tries to keep the set of certain (more computable!) variables at their optimal values (setpoints) because keeping these variables at their setpoints correlates really well with survival. For example, keeping the visual variable at the value “absence of a lion in your visual field”,  or keeping the concentration of salt ions in the body at a certain level, [borrowing the example of Steve Byrnes](https://www.lesswrong.com/posts/wcNEXDHowiWkRxDNv/inner-alignment-in-salt-starved-rats).
 
-When one of these variables deviates from its setpoint, the brain turns on the complex machinery (negative feedback controller) to bring this variable closer to its setpoint. This machinery is called **the action selection mechanism**.
+When one of these variables deviates from its setpoint, the brain turns on the complex machinery (negative feedback controller) to bring this variable closer to its setpoint. This machinery is called **the action selection mechanism**. For example, when the concentration of salt drops below the desired level, animal either starts to eat salty food if it’s nearby or starts to search salty food. The action selection mechanism in this case chooses the action: to eat salty food nearby or to go foraging. If go foraging, where to go and so on.
 
-The goal of this post is to describe really coarsely the potential scheme for such an action selection mechanism that requires 3 types of comparators: circuits that compare the values of two inputs and become active if these input values coincide ("match comparator") or don't coincide ("mismatch comparator").
+The goal of this post is to describe really coarsely the potential scheme for such an action selection mechanism that requires 3 types of comparators.
+Comparator is the circuit that receives two input signals. The strengths of these signals encode the value of the inputs. There can be two types of compactors. **Mismatch comparator** becomes active if these input values don’t coincide. Match comparators becomes active if they coincide. The comparator can be the assembly of many neurons or only one neuron. In my drawings I will use boxes for them in order not to assume that they are neurons, instead it’s a black box with the properties described above.
 
 So, which components might we need to select a good action that really brings the deviated variable closer to its setpoint?
 
@@ -54,7 +55,7 @@ So, which components might we need to select a good action that really brings th
 
 Let's denote with $$V$$ our deviated variable. 
 
-For the whole mechanism to work, we need to be able to detect the deviation of $$V$$ in the first place. Let's introduce *the first type of comparator*. Its first input is **the actual value of this variable**  at time t: $$V = v_i^{(t)}$$, which is being measured with internal or external sensors, for example, the current taste of salt, [borrowing the example of Steve Byrnes](https://www.lesswrong.com/posts/wcNEXDHowiWkRxDNv/inner-alignment-in-salt-starved-rats). The second input - **the desired value** $$V = v_{set}$$ - e.g. the desired feeling of saltiness on the tongue[^1].
+For the whole mechanism to work, we need to be able to detect the deviation of $$V$$ in the first place. Let's introduce *the first type of comparator*. Its first input is **the actual value of this variable**  at time t: $$V = v_i^{(t)}$$, which is being measured with internal or external sensors, for example, the current taste of salt.The second input - **the desired value** $$V = v_{set}$$ - e.g. the desired feeling of saltiness on the tongue[^1].
 
 This type of comparator should be a mismatch comparator that gets active when the deviation is sensed as we want this signal to be salient and available to other circuits.
 
@@ -89,7 +90,7 @@ Here is where *the second type of comparator* appears. It is the key element in 
 
 ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fspindle%2F3nK_lWVLfu.jpg?alt=media&token=625c6c94-fafb-4729-9db8-91e594da9335)
 
-I assume that if these comparators even exist, they are more likely to be match comparators, because the action that is the closest to the desired input should be the salient signal. [BAC firing](https://bastak.github.io/2021/11/15/psychedelics-pareidolia.html) could be one implementation of such comparator. And speculating further, if these action selection comparators are the subset of the excitatory cortical neurons (which have these nice properties of match comparator) in the e.g. visual cortex, then it is funny to think that the firing of these neurons is not needed to represent visual stimuli at all (it is already known that firing of many neurons in the visual cortex poorly reflects the visual stimuli,  rather [they are correlated with movements](https://www.nature.com/articles/s41586-019-1346-5)), but instead it helps to select the action that will lead to the desired (in the current second) visual input.
+I assume that if these comparators even exist, they are more likely to be match comparators, because the action that is the closest to the desired input should be the salient signal. If we assume that these comparators are single neurons, then subset of cortical excitatory cells with [BAC firing](https://bastak.github.io/2021/11/15/psychedelics-pareidolia.html) have the nice properties of such match comparator. 
 
 If we consider the problem of capturing the prey and the organism wants to keep the prey all the time in the center of the visual field, then the correct choice between "turn left" or "turn right" is different every second (i.e. setpoint is dynamical, prey is to the left or to the right) and there is no way the action selection mechanism can know which action to choose without the help of the visual cortex! However i
 
@@ -102,6 +103,14 @@ To sum up, here is how these three comparators differ from each other in terms o
 ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fspindle%2FMPMTPtaJ3J.jpg?alt=media&token=303bd201-ebd7-4ebc-a3d1-2818ea0e049e)
 
 This is the simplest architecture that I can imagine which implements such a negative feedback controller. I would be happy to know which aspects of this model are contradicted or supported by experimental data.
+
+
+
+### Where can these comparators be located?
+And speculating further, if for the visual variables sual cortex, then it is funny to think that the firing of these neurons is not needed to represent visual stimuli at all (it is already known that firing of many neurons in the visual cortex poorly reflects the visual stimuli,  rather [they are correlated with movements](https://www.nature.com/articles/s41586-019-1346-5)), but instead it helps to select the action that will lead to the desired (in the current second) visual input.
+
+
+
 
 
 ### Footnotes
