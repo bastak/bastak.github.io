@@ -1,6 +1,9 @@
-Status: raw post, more like a stream of consciousness
+---
+layout: post
+title:  "Overthinking as overfitting"
+---
 
-inspired by https://twitter.com/nickcammarata/status/1381685410263400456?s=20&t=9kyB8iky3NgBzu_RZc4hLg
+*Status: raw post, more like a stream of consciousness*
 
 If we imagine the cortex as the machine that finds patterns in patterns and predicts more and more sensory consequences as it runs, the important engineering problem when designing such a machine is to create a mechanism that knows when it’s the right moment to halt the machine, to stop searching for patterns in patterns, and predict consequences. 
 
