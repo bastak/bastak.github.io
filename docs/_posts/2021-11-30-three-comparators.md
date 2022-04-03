@@ -102,6 +102,9 @@ To sum up, here is how these three comparators differ from each other in terms o
 
 This is the simplest architecture that I can imagine which implements such a negative feedback controller. I would be happy to know which aspects of this model are contradicted or supported by experimental data.
 
+### If these comparators exist, where can they be located?
+
+This speculative architecture emphasizes that in order for the brain to function, there should be at least 3 types of comparators receiving different types of inputs, in contrast to predictive processing which focuses on only one type of the comparator (blue, comparing predictions of some variable with the actual value). So if they exist, where can they be? There is an evidence that layer 2/3 neurons [can be the blue forward model comparators](https://www.sciencedirect.com/science/article/pii/S0896627318308572), but what about the action-selecting comparators (red) and deviation-detection comparators (green)? The main constraint on their location is that they have to receive the information about the desired input. One idea could be to assume that some homeostatic variables (electrolyte level, body temperature) can be hardcoded in hypothalamus, so the neurons that receive hypothalamic projections could be these red and green comparators. For the sensory variables this idea won't work though because we have no clue how the desired sensory input is propagated and which is a separate interesting question on its own.
 
 
 ### Footnotes
