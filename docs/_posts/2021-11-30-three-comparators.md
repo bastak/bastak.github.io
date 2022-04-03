@@ -32,8 +32,6 @@ My current guess after reading [a great paper from Paul Cisek](https://link.spri
 ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fspindle%2FD_fQF3Gab2.jpg?alt=media&token=df5e7caa-f776-45cb-bd9c-14db5427f875)
 
 
-<img src="https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fspindle%2FD_fQF3Gab2.jpg?alt=media&token=df5e7caa-f776-45cb-bd9c-14db5427f875" alt="drawing" width="200"/>
-
 What do I mean by this?
 
 In his paper, Cisek proposes to consider any organism as a set of negative feedback controllers.
