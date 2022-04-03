@@ -90,7 +90,7 @@ Here is where *the second type of comparator* appears. It is the key element in 
 
 I assume that if these comparators even exist, they are more likely to be match comparators, because the action that is the closest to the desired input should be the salient signal. If we assume that these comparators are single neurons, then subset of cortical excitatory cells with [BAC firing](https://bastak.github.io/2021/11/15/psychedelics-pareidolia.html) have the nice properties of such match comparator. 
 
-If we consider the problem of capturing the prey and the organism wants to keep the prey all the time in the center of the visual field, then the correct choice between "turn left" or "turn right" is different every second (i.e. setpoint is dynamical, prey is to the left or to the right) and there is no way the action selection mechanism can know which action to choose without the help of the visual cortex! However i
+
 
 The *third type of comparator* appears if we start to get concerned about how the forward model is learned. One possible implementation is the predictive processing module: there the key element is the prediction error neuron: mismatch comparator that receives **the predictions about the variable** $$V$$ from the forward model and **the actual value of** $$V$$ in the next time point. If the prediction and the actual value are different, the prediction error neuron fires, this signal goes to the forward model and magically updates it so that better predictions of $$V$$ for the given action are generated in the future.
 
@@ -101,13 +101,6 @@ To sum up, here is how these three comparators differ from each other in terms o
 ![](https://firebasestorage.googleapis.com/v0/b/firescript-577a2.appspot.com/o/imgs%2Fapp%2Fspindle%2FMPMTPtaJ3J.jpg?alt=media&token=303bd201-ebd7-4ebc-a3d1-2818ea0e049e)
 
 This is the simplest architecture that I can imagine which implements such a negative feedback controller. I would be happy to know which aspects of this model are contradicted or supported by experimental data.
-
-
-
-### Where can these comparators be located?
-And speculating further, if for the visual variables sual cortex, then it is funny to think that the firing of these neurons is not needed to represent visual stimuli at all (it is already known that firing of many neurons in the visual cortex poorly reflects the visual stimuli,  rather [they are correlated with movements](https://www.nature.com/articles/s41586-019-1346-5)), but instead it helps to select the action that will lead to the desired (in the current second) visual input.
-
-
 
 
 
